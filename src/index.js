@@ -6,17 +6,16 @@ import {Provider} from 'react-redux'
 import store from './redux/store'
 
 import theme from './theme/materialUiTheme'
-import StyledApp from './theme/globalStyles.style'
+import GlobalStyle from './theme/globalStyles.style'
 import { ThemeProvider } from 'styled-components'
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <Provider store={store}>
-      <StyledApp>
-        <Routes/>
-      </StyledApp>
-    </Provider>
-  </ThemeProvider>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Routes/>
+      <GlobalStyle/>
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 )
 

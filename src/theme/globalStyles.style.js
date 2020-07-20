@@ -1,12 +1,14 @@
-import styled from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-const StyledApp = styled.div`
+const GlobalStyle = createGlobalStyle`
     *{
         margin: 0px;
         padding: 0px;
         
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"';
     }
 `
 
-export default StyledApp
+export default GlobalStyle
